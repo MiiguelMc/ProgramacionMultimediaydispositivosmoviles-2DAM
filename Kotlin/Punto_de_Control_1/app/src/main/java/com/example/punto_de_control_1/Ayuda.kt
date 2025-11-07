@@ -3,7 +3,9 @@ package com.example.punto_de_control_1
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -43,7 +45,7 @@ fun Ayuda(modifier: Modifier = Modifier) {
         )
 
             Text(
-                text = "Problemas con el clima",
+                text = "1. Problemas con el clima",
                 style = MaterialTheme.typography.titleMedium,
                 textAlign = TextAlign.Center
             )
@@ -55,6 +57,52 @@ fun Ayuda(modifier: Modifier = Modifier) {
                 textAlign = TextAlign.Center
 
             )
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            text = "2. Problemas con electricidad o agua",
+            style = MaterialTheme.typography.titleMedium,
+            textAlign = TextAlign.Center
+        )
+        Text(
+            text = "Si tienes algún inconveniente con la conexión eléctrica o el suministro de agua, avísanos a través de la app o en recepción \n" +
+            "Nuestro equipo técnico está disponible las 24 h para resolverlo lo antes posible.",
+            style = MaterialTheme.typography.titleMedium,
+            textAlign = TextAlign.Center
+
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            text = "3. Pérdida de objetos o documentación",
+            style = MaterialTheme.typography.titleMedium,
+            textAlign = TextAlign.Center
+        )
+        Text(
+            text = "¿Has perdido algo importante?\n" +
+                    "Disponemos de un servicio de objetos perdidos.\n" +
+                    "Solo tienes que registrar el objeto en la app o avisar en recepción.\n" +
+                    "Si se trata de documentación, te ayudaremos a contactar con las autoridades locales.",
+            style = MaterialTheme.typography.titleMedium,
+            textAlign = TextAlign.Center
+
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            text = "4. Emergencias médicas",
+            style = MaterialTheme.typography.titleMedium,
+            textAlign = TextAlign.Center
+        )
+        Text(
+            text = "La seguridad de nuestros huéspedes es lo primero.\n" +
+                    "Contamos con botiquín y personal con formación básica en primeros auxilios.\n" +
+                    "En caso de emergencia grave, te ayudaremos a contactar rápidamente con los servicios sanitarios más cercanos.",
+            style = MaterialTheme.typography.titleMedium,
+            textAlign = TextAlign.Center
+
+        )
+
 
 
 
@@ -67,32 +115,8 @@ fun AyudaPreview() {
     Ayuda()
 }
 /*
-* 🔌 2. Problemas con electricidad o agua
+*
 
-Si tienes algún inconveniente con la conexión eléctrica o el suministro de agua, avísanos a través de la app o en recepción.
-Nuestro equipo técnico está disponible las 24 h para resolverlo lo antes posible.
-
-🧭 3. Pérdida de objetos o documentación
-
-¿Has perdido algo importante?
-Disponemos de un servicio de objetos perdidos.
-Solo tienes que registrar el objeto en la app o avisar en recepción.
-Si se trata de documentación, te ayudaremos a contactar con las autoridades locales.
-
-🚗 4. Problemas de transporte
-
-Si tienes dificultades para llegar al camping o moverte por la isla, podemos ayudarte con información sobre:
-
-Horarios de autobuses y taxis
-
-Servicios de traslado al aeropuerto
-
-Alquiler de bicicletas o coches
-
-Rutas seguras para llegar caminando
-Nuestro personal estará encantado de orientarte.
-
-❤️ 5. Emergencias médicas
 
 La seguridad de nuestros huéspedes es lo primero.
 Contamos con botiquín y personal con formación básica en primeros auxilios.
