@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PruebaPractica</string>
+    <string name="Titulo">To do</string>
+    <string name="Tarea1">Study Kotlin</string>
+    <string name="Tarea2">Sport</string>
+    <string name="Tarea3">Read a book</string>
+    <string name="Tarea4">See the emails</string>
+</resources>

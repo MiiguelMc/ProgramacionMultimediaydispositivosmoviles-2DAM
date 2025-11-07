@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PruebaPractica</string>
+    <string name="Titulo" >Mis Tareas</string>
+    <string name ="Tarea1">Estudiar Kotlin </string>
+    <string name ="Tarea2">Hacer Ejercicio </string>
+    <string name ="Tarea3">Leer un libro</string>
+    <string name ="Tarea4">Revisar correo </string>
+
+</resources>

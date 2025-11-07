@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Punto_de_Control_1</string>
+    <string name="TituloCamping">Welcome To camping Azores</string>
+    <string name="DescripcionLogo">Descripcion of logo</string>
+    <string name="SobreNosotros">"About us "</string>
+    <string name="Autor">Develop for Miguel Macías</string>
+    <string name="Licencia">Licences no comercial</string>
 </resources>

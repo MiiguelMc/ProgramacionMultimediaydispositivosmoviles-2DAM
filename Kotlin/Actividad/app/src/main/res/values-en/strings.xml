@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Actividad</string>
+    <string name="segundoboton">Reset</string>
+    <string name="principal">No click button</string>
+    <string name="clickprimerboton">Miguel Macias click the button</string>
+    <string name="Cartas">Number of cards</string>
+    <string name="primerboton">Press</string>
+</resources>

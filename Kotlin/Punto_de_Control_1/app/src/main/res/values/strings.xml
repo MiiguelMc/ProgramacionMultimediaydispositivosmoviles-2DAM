@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Punto_de_Control_1</string>
+    <string name="TituloCamping">Bienvenidos a camping Azores</string>
+    <string name="DescripcionLogo">Logo del camping Azores</string>
+    <string name="SobreNosotros">Sobre Nosotros</string>
+    <string name="Autor">Desarrollado por  Miguel Macías</string>
+    <string name="Licencia">Licencia No Comercial</string>
+
+
 </resources>

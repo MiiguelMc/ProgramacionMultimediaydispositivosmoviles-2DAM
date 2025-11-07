@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Actividad</string>
+    <string name="Cartas">Numero de tarjeta</string>
+    <string name="primerboton">Pulsar</string>
+    <string name="segundoboton">Restablecer</string>
+    <string name="principal">Nadie ha pulsado el boton</string>
+    <string name="clickprimerboton">Miguel Macias ha pulsado el boton</string>
+
+</resources>
