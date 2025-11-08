@@ -4,7 +4,35 @@
     <string name="DescripcionLogo">Logo del camping Azores</string>
     <string name="SobreNosotros">Sobre Nosotros</string>
     <string name="Autor">Desarrollado por  Miguel Macías</string>
-    <string name="Licencia">Licencia No Comercial</string>
+    <string name="Licencia">Este software es libre y de código abierto bajo la Licencia MIT.</string>
+    <string name="Version">Version 1.0</string>
+
+
+    <string name="Ayuda">Necesitas Ayuda?</string>
+    <string name="Problema1">1. Problemas con el clima</string>
+    <string name="Problema1Texto">En las Azores el tiempo puede cambiar rápidamente.\n" +
+                        "Si la lluvia o el viento te sorprenden, nuestro equipo te ayudará a reubicar tu tienda o a conseguir refugio temporal.\n" +
+                        "También contamos con zonas cubiertas y alquiler de material impermeable para que tu estancia siga siendo cómoda y segura."</string>
+    <string name="Problema2">"2. Problemas con electricidad o agua </string>
+    <string name="Problema2Texto">Si tienes algún inconveniente con la conexión eléctrica o el suministro de agua, avísanos a través de la app o en recepción \n" +
+            "Nuestro equipo técnico está disponible las 24 h para resolverlo lo antes posible. </string>
+
+    <string name="Problema3">3. Pérdida de objetos o documentación </string>
+    <string name="Problema3Texto"> ¿Has perdido algo importante?\n" +
+    "Disponemos de un servicio de objetos perdidos.\n" +
+    "Solo tienes que registrar el objeto en la app o avisar en recepción.\n" +
+    "Si se trata de documentación, te ayudaremos a contactar con las autoridades locales. </string>
+    <string name="Problema4">4. Emergencias médicas</string>
+    <string name="Problema4Texto">La seguridad de nuestros huéspedes es lo primero.\n" +
+                    "Contamos con botiquín y personal con formación básica en primeros auxilios.\n" +
+                    "En caso de emergencia grave, te ayudaremos a contactar rápidamente con los servicios sanitarios más cercanos. </string>
+    <string name="Problema5">5. Problemas con vecinos o ruido</string>
+
+    <string name="Problema5Texto">  Para asegurar la tranquilidad de todos, el camping tiene horarios de silencio obligatorios.
+    +
+    Si el ruido de otros campistas te molesta, por favor, notifícanoslo a través de la app o en recepción.
+    +
+    Intervendremos discretamente para que puedas disfrutar de tu descanso sin interrupciones. </string>
 
 
 </resources>

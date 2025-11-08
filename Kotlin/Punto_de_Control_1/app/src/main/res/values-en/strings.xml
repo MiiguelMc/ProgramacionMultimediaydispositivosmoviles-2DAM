@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Punto_de_Control_1</string>
-    <string name="TituloCamping">Welcome To camping Azores</string>
-    <string name="DescripcionLogo">Descripcion of logo</string>
-    <string name="SobreNosotros">"About us "</string>
-    <string name="Autor">Develop for Miguel Macías</string>
-    <string name="Licencia">Licences no comercial</string>
+    <string name="TituloCamping">Welcome to Camping Azores</string>
+    <string name="DescripcionLogo">Logo of Camping Azores</string>
+    <string name="SobreNosotros">About us</string>
+    <string name="Autor">Developed by Miguel Macías</string>
+    <string name="Licencia">This software is free and open-source under the MIT License.</string>
+    <string name="Version">Version 1.0</string>
+    <string name="Ayuda">Do you need help?</string>
+    <string name="Problema1">1. Problems with the weather</string>
+    <string name="Problema1Texto">In the Azores, the weather can change quickly. If rain or wind catches you by surprise, our team will help you relocate your tent or find temporary shelter. We also have covered areas and rental waterproof gear to ensure your stay remains comfortable and safe.</string>
+    <string name="Problema2">2. Problems with electricity or water</string>
+    <string name="Problema2Texto">If you have any issues with the electrical connection or water supply, let us know through the app or at the reception. Our technical team is available 24 hours to resolve it as soon as possible.</string>
+    <string name="Problema3">3. Loss of objects or documentation</string>
+    <string name="Problema3Texto">Have you lost something important? We have a lost and found service. You just need to register the item in the app or notify the reception. If it is documentation, we will help you contact the local authorities.</string>
+    <string name="Problema4">4. Medical Emergencies</string>
+    <string name="Problema4Texto">The safety of our guests comes first. We have a first aid kit and staff trained in basic first aid. In the event of a serious emergency, we will help you quickly contact the nearest medical services.</string>
+    <string name="Problema5">5. Issues with neighbors or noise</string>
+    <string name="Problema5Texto">To ensure everyone\'s peace, the campsite has mandatory quiet hours. If noise from other campers is bothering you, please notify us via the app or at reception. We will intervene discreetly so you can enjoy your rest without interruptions.</string>
 </resources>

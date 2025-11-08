@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Card
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,18 +15,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun AcercaDe(modifier: Modifier = Modifier ) {
+fun AcercaDe(modifier: Modifier = Modifier) {
 
     val context = LocalContext.current
-    Column (
+    Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(16.dp,
-            alignment = Alignment.CenterVertically   )
+        verticalArrangement = Arrangement.spacedBy(
+            16.dp,
+            alignment = Alignment.CenterVertically
+        )
 
     ) {
 
@@ -37,18 +41,22 @@ fun AcercaDe(modifier: Modifier = Modifier ) {
                 .clip(CircleShape)
         )
         Text(
-            text = context.getString(R.string.Autor)
+            text = context.getString(R.string.Autor),
+                    style = MaterialTheme.typography.titleLarge
+
         )
 
-            Text(
-                text = context.getString(R.string.Licencia)
-            )
+        Text(
+            text = context.getString(R.string.Licencia),
+            style = MaterialTheme.typography.titleLarge,
+            textAlign = TextAlign.Center
 
-
+        )
 
 
     }
 }
+
 @Preview
 @Composable
 fun AcercaDePreview() {
