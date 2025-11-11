@@ -1,5 +1,6 @@
-package com.example.punto_de_control_1
+package com.example.punto_de_control_1.ui
 
+import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -8,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
@@ -16,17 +16,25 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.punto_de_control_1.R
 
 @Composable
 fun Ayuda(modifier: Modifier = Modifier) {
 
     val context = LocalContext.current
+
+    Image(
+        painter = painterResource(id = R.drawable.fondoayuda),
+        contentDescription = context.getString(R.string.DescripcionLogo),
+        modifier = Modifier.fillMaxSize(),
+        contentScale = ContentScale.Crop
+    )
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -143,7 +151,7 @@ fun Ayuda(modifier: Modifier = Modifier) {
 }
 
 
-@Preview
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun AyudaPreview() {
     Ayuda()
