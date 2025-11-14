@@ -1,4 +1,4 @@
-package com.example.punto_de_control_1.ui
+package com.example.punto_de_control_1.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

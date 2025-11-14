@@ -1,4 +1,4 @@
-package com.example.punto_de_control_1.ui
+package com.example.punto_de_control_1.view
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image

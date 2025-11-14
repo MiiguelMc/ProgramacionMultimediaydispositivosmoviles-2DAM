@@ -1,4 +1,4 @@
-package com.example.punto_de_control_1.ui.theme
+package com.example.punto_de_control_1.view.theme
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

@@ -1,4 +1,4 @@
-package com.example.punto_de_control_1.ui.theme
+package com.example.punto_de_control_1.view.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF415F91)
