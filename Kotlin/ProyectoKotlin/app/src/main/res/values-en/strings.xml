@@ -18,4 +18,10 @@
     <string name="Problema4Texto">The safety of our guests comes first. We have a first aid kit and staff trained in basic first aid. In the event of a serious emergency, we will help you quickly contact the nearest medical services.</string>
     <string name="Problema5">5. Issues with neighbors or noise</string>
     <string name="Problema5Texto">To ensure everyone\'s peace, the campsite has mandatory quiet hours. If noise from other campers is bothering you, please notify us via the app or at reception. We will intervene discreetly so you can enjoy your rest without interruptions.</string>
+    <string name="checkbox">Permit use data</string>
+    <string name="switch_boton">Enable notifications</string>
+    <string name="radio">Select an option</string>
+    <string name="radio_opcion2">Dark</string>
+    <string name="buttom_Guardar">Save</string>
+    <string name="radio_opcion1">Light</string>
 </resources>

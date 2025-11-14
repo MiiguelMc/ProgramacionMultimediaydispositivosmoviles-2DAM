@@ -34,6 +34,12 @@ Esta aplicación facilita la búsqueda y organización de campings, priorizando 
     Si el ruido de otros campistas te molesta, por favor, notifícanoslo a través de la app o en recepción.
     +
     Intervendremos discretamente para que puedas disfrutar de tu descanso sin interrupciones. </string>
+    <string name="checkbox">Permitir Uso de datos</string>
+    <string name="switch_boton">Habilitar notificaciones</string>
+    <string name="radio">Selecciona una opción</string>
+    <string name="radio_opcion1">Claro</string>
+    <string name="radio_opcion2">Oscuro</string>
+    <string name="buttom_Guardar">Guardar</string>
 
 
 </resources>
