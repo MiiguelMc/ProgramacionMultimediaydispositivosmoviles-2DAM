@@ -60,7 +60,7 @@ fun Configuracion() {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = "Uso de Datos", fontWeight = FontWeight.Bold)
+        Text(text = stringResource(id = R.string.usodedatos), fontWeight = FontWeight.Bold)
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.fillMaxWidth()
