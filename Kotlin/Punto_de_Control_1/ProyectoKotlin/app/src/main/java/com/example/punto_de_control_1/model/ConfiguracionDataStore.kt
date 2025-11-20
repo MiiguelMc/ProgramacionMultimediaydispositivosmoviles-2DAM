@@ -10,17 +10,14 @@ import kotlinx.coroutines.flow.map
 class ConfiguracionDataStore(private val context: Context) {
 
     companion object {
-        // Delegado DataStore para todas las instancias
         private val Context.dataStore: DataStore<Preferences> by preferencesDataStore("configuracion")
 
-        // Claves de preferencias
         val CHECK_OPTION = booleanPreferencesKey("check_option")
         val SWITCH_OPTION = booleanPreferencesKey("switch_option")
         val RADIO_OPTION = stringPreferencesKey("radio_option")
         val DROPDOWN_OPTION = stringPreferencesKey("dropdown_option")
     }
 
-    // Flujos para leer los valores
     val checkOptionFlow: Flow<Boolean> = context.dataStore.data
         .map { it[CHECK_OPTION] ?: false }
 
@@ -28,12 +25,11 @@ class ConfiguracionDataStore(private val context: Context) {
         .map { it[SWITCH_OPTION] ?: false }
 
     val radioOptionFlow: Flow<String> = context.dataStore.data
-        .map { it[RADIO_OPTION] ?: "opcion1" }
+        .map { it[RADIO_OPTION] ?: "claro" }
 
     val dropdownOptionFlow: Flow<String> = context.dataStore.data
-        .map { it[DROPDOWN_OPTION] ?: "item1" }
+        .map { it[DROPDOWN_OPTION] ?: "español" }
 
-    // Métodos para actualizar valores
     suspend fun updateCheckOption(value: Boolean) {
         context.dataStore.edit { it[CHECK_OPTION] = value }
     }
