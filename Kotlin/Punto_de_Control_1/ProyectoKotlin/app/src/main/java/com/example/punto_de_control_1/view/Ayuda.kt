@@ -12,6 +12,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,6 +24,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.punto_de_control_1.R
+import com.example.punto_de_control_1.view.theme.Punto_de_Control_1Theme
 
 @Composable
 fun Ayuda(modifier: Modifier = Modifier) {
@@ -151,8 +153,12 @@ fun Ayuda(modifier: Modifier = Modifier) {
 }
 
 
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Preview(uiMode =  Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun AyudaPreview() {
-    Ayuda()
+    Punto_de_Control_1Theme {
+        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            Ayuda()
+        }
+    }
 }

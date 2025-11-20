@@ -30,9 +30,9 @@ Esta aplicación facilita la búsqueda y organización de campings, priorizando 
     <string name="Problema5">5. Problemas con vecinos o ruido</string>
 
     <string name="Problema5Texto">  Para asegurar la tranquilidad de todos, el camping tiene horarios de silencio obligatorios.
-    +
+
     Si el ruido de otros campistas te molesta, por favor, notifícanoslo a través de la app o en recepción.
-    +
+
     Intervendremos discretamente para que puedas disfrutar de tu descanso sin interrupciones. </string>
     <string name="checkbox">Permitir Uso de datos</string>
     <string name="switch_boton">Habilitar notificaciones</string>
@@ -40,6 +40,7 @@ Esta aplicación facilita la búsqueda y organización de campings, priorizando 
     <string name="radio_opcion1">Claro</string>
     <string name="radio_opcion2">Oscuro</string>
     <string name="buttom_Guardar">Guardar</string>
+    <string name="idioma">Idioma</string>
 
 
 </resources>

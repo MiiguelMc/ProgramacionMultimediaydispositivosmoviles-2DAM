@@ -24,4 +24,9 @@
     <string name="radio_opcion2">Dark</string>
     <string name="buttom_Guardar">Save</string>
     <string name="radio_opcion1">Light</string>
+    <string name="idioma">Language</string>
+    <string name="claro">claro</string>
+    <string name="oscuro">oscuro</string>
+    <string name="configuracion">configuracion</string>
+    <string name="usodedatos">usodedatos</string>
 </resources>

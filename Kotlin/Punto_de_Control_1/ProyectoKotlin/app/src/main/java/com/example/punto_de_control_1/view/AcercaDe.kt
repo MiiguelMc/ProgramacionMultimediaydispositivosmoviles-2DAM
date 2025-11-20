@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,6 +19,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.punto_de_control_1.R
+import com.example.punto_de_control_1.view.theme.Punto_de_Control_1Theme
 
 @Composable
 fun AcercaDe(modifier: Modifier = Modifier) {
@@ -60,5 +62,9 @@ fun AcercaDe(modifier: Modifier = Modifier) {
 @Preview
 @Composable
 fun AcercaDePreview() {
-    AcercaDe()
+    Punto_de_Control_1Theme {
+        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            AcercaDe()
+        }
+    }
 }

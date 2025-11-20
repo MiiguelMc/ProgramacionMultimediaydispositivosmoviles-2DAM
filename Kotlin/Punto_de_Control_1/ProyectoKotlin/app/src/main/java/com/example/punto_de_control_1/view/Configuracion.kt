@@ -74,7 +74,6 @@ fun ConfiguracionScreen() {
         }
 
         Spacer(modifier = Modifier.height(15.dp))
-        Spacer(modifier = Modifier.height(15.dp))
 
 
         Row(
@@ -92,7 +91,6 @@ fun ConfiguracionScreen() {
             )
         }
 
-        Spacer(modifier = Modifier.height(15.dp))
         Spacer(modifier = Modifier.height(15.dp))
 
 
@@ -120,9 +118,8 @@ fun ConfiguracionScreen() {
         }
 
         Spacer(modifier = Modifier.height(15.dp))
-        Spacer(modifier = Modifier.height(15.dp))
 
-        Text(text = "Lenguaje", fontWeight = FontWeight.Bold)
+        Text(text = stringResource(id = R.string.idioma), fontWeight = FontWeight.Bold)
         Spacer(modifier = Modifier.height(8.dp))
 
         var expanded by remember { mutableStateOf(false) }
