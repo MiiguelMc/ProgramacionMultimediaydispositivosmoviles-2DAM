@@ -1,5 +1,6 @@
 package com.example.punto_de_control_1.view
 
+import android.content.res.Configuration
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -15,34 +16,33 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.punto_de_control_1.R
 import com.example.punto_de_control_1.model.ConfiguracionDataStore
+import com.example.punto_de_control_1.view.theme.Punto_de_Control_1Theme
 import kotlinx.coroutines.launch
 
 @Composable
-fun ConfiguracionScreen() {
-    val context = LocalContext.current
+fun Configuracion() {
+    val contexto = LocalContext.current
     val scope = rememberCoroutineScope()
 
+    val misDatos = remember { ConfiguracionDataStore(contexto) }
 
-    val configDataStore = remember { ConfiguracionDataStore(context) }
+    val valorGuardadoCheck by misDatos.obtenerCheckbox.collectAsState(initial = false)
+    val valorGuardadoSwitch by misDatos.obtenerSwitch.collectAsState(initial = false)
+    val valorGuardadoRadio by misDatos.obtenerRadio.collectAsState(initial = "claro")
+    val valorGuardadoMenu by misDatos.obtenerDesplegable.collectAsState(initial = "Español")
 
+    var estadoCheck by remember { mutableStateOf(false) }
+    var estadoSwitch by remember { mutableStateOf(false) }
+    var estadoRadio by remember { mutableStateOf("claro") }
+    var estadoMenu by remember { mutableStateOf("Español") }
 
-    val checkvalor by configDataStore.checkOptionFlow.collectAsState(initial = false)
-    val switchvalor by configDataStore.switchOptionFlow.collectAsState(initial = false)
-    val radiovalor by configDataStore.radioOptionFlow.collectAsState(initial = "claro")
-    val menuvalor by configDataStore.dropdownOptionFlow.collectAsState(initial = "Español")
+    val listaIdiomas = listOf("Ingles", "Español", "Portuges")
 
-    var check by remember { mutableStateOf(false) }
-    var switch by remember { mutableStateOf(false) }
-    var radio by remember { mutableStateOf("claro") }
-    var menu by remember { mutableStateOf("Español") }
-
-    val dropdownItems = listOf("Ingles", "Español", "Portuges")
-
-    LaunchedEffect(checkvalor, switchvalor, radiovalor, menuvalor) {
-        check = checkvalor
-        switch = switchvalor
-        radio = radiovalor
-        menu = menuvalor
+    LaunchedEffect(valorGuardadoCheck, valorGuardadoSwitch, valorGuardadoRadio, valorGuardadoMenu) {
+        estadoCheck = valorGuardadoCheck
+        estadoSwitch = valorGuardadoSwitch
+        estadoRadio = valorGuardadoRadio
+        estadoMenu = valorGuardadoMenu
     }
 
     Column(
@@ -56,7 +56,6 @@ fun ConfiguracionScreen() {
             text = "Configuración",
             fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
-
         )
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -67,8 +66,8 @@ fun ConfiguracionScreen() {
             modifier = Modifier.fillMaxWidth()
         ) {
             Checkbox(
-                checked = check,
-                onCheckedChange = { check = it }
+                checked = estadoCheck,
+                onCheckedChange = { estadoCheck = it }
             )
             Text(text = stringResource(id = R.string.checkbox))
         }
@@ -80,14 +79,14 @@ fun ConfiguracionScreen() {
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.fillMaxWidth(),
 
-        ) {
+            ) {
             Text(
                 text = stringResource(id = R.string.switch_boton),
                 fontSize = 18.sp
             )
             Switch(
-                checked = switch,
-                onCheckedChange = { switch = it }
+                checked = estadoSwitch,
+                onCheckedChange = { estadoSwitch = it }
             )
         }
 
@@ -103,18 +102,18 @@ fun ConfiguracionScreen() {
 
         Row(verticalAlignment = Alignment.CenterVertically) {
             RadioButton(
-                selected = radio == "claro",
-                onClick = { radio = "claro" }
+                selected = estadoRadio == "claro",
+                onClick = { estadoRadio = "claro" }
             )
-            Text(text = stringResource(id = R.string.radio_opcion1))
+            Text(text = stringResource(id = R.string.claro))
         }
 
         Row(verticalAlignment = Alignment.CenterVertically) {
             RadioButton(
-                selected = radio == "oscuro",
-                onClick = { radio = "oscuro" }
+                selected = estadoRadio == "oscuro",
+                onClick = { estadoRadio = "oscuro" }
             )
-            Text(text = stringResource(id = R.string.radio_opcion2))
+            Text(text = stringResource(id = R.string.oscuro))
         }
 
         Spacer(modifier = Modifier.height(15.dp))
@@ -122,22 +121,22 @@ fun ConfiguracionScreen() {
         Text(text = stringResource(id = R.string.idioma), fontWeight = FontWeight.Bold)
         Spacer(modifier = Modifier.height(8.dp))
 
-        var expanded by remember { mutableStateOf(false) }
+        var menuExpandido by remember { mutableStateOf(false) }
 
         Box {
-            OutlinedButton(onClick = { expanded = true }) {
-                Text(text = " $menu")
+            OutlinedButton(onClick = { menuExpandido = true }) {
+                Text(text = " $estadoMenu")
             }
             DropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false }
+                expanded = menuExpandido,
+                onDismissRequest = { menuExpandido = false }
             ) {
-                dropdownItems.forEach { item ->
+                listaIdiomas.forEach { idioma ->
                     DropdownMenuItem(
-                        text = { Text(text = item) },
+                        text = { Text(text = idioma) },
                         onClick = {
-                            menu = item
-                            expanded = false
+                            estadoMenu = idioma
+                            menuExpandido = false
                         }
                     )
                 }
@@ -149,10 +148,10 @@ fun ConfiguracionScreen() {
         Button(
             onClick = {
                 scope.launch {
-                    configDataStore.updateCheckOption(check)
-                    configDataStore.updateSwitchOption(switch)
-                    configDataStore.updateRadioOption(radio)
-                    configDataStore.updateDropdownOption(menu)
+                    misDatos.guardarCheckbox(estadoCheck)
+                    misDatos.guardarSwitch(estadoSwitch)
+                    misDatos.guardarRadio(estadoRadio)
+                    misDatos.guardarDesplegable(estadoMenu)
                 }
             },
             modifier = Modifier.fillMaxWidth()
@@ -165,8 +164,12 @@ fun ConfiguracionScreen() {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(uiMode =  Configuration.UI_MODE_NIGHT_YES)
 @Composable
-fun ConfiguracionPreview() {
-    ConfiguracionScreen()
+fun configuracionPreview() {
+    Punto_de_Control_1Theme {
+        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            Configuracion()
+        }
+    }
 }

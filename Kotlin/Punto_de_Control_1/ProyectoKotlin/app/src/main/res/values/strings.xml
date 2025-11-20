@@ -37,10 +37,12 @@ Esta aplicación facilita la búsqueda y organización de campings, priorizando 
     <string name="checkbox">Permitir Uso de datos</string>
     <string name="switch_boton">Habilitar notificaciones</string>
     <string name="radio">Selecciona una opción</string>
-    <string name="radio_opcion1">Claro</string>
-    <string name="radio_opcion2">Oscuro</string>
     <string name="buttom_Guardar">Guardar</string>
     <string name="idioma">Idioma</string>
+    <string name="claro">claro</string>
+    <string name="oscuro">oscuro</string>
+    <string name="configuracion">configuracion</string>
+    <string name="usodedatos">usodedatos</string>
 
 
 </resources>

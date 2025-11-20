@@ -21,12 +21,10 @@
     <string name="checkbox">Permit use data</string>
     <string name="switch_boton">Enable notifications</string>
     <string name="radio">Select an option</string>
-    <string name="radio_opcion2">Dark</string>
     <string name="buttom_Guardar">Save</string>
-    <string name="radio_opcion1">Light</string>
     <string name="idioma">Language</string>
-    <string name="claro">claro</string>
-    <string name="oscuro">oscuro</string>
-    <string name="configuracion">configuracion</string>
-    <string name="usodedatos">usodedatos</string>
+    <string name="claro">Clear</string>
+    <string name="oscuro">Dark</string>
+    <string name="configuracion">Settings</string>
+    <string name="usodedatos">use data</string>
 </resources>

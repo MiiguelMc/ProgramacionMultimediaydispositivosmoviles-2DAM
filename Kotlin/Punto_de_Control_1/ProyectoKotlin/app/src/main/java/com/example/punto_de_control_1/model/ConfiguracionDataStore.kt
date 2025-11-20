@@ -12,37 +12,40 @@ class ConfiguracionDataStore(private val context: Context) {
     companion object {
         private val Context.dataStore: DataStore<Preferences> by preferencesDataStore("configuracion")
 
-        val CHECK_OPTION = booleanPreferencesKey("check_option")
-        val SWITCH_OPTION = booleanPreferencesKey("switch_option")
-        val RADIO_OPTION = stringPreferencesKey("radio_option")
-        val DROPDOWN_OPTION = stringPreferencesKey("dropdown_option")
+        // Nombres de las claves en la base de datos
+        val CLAVE_CHECKBOX = booleanPreferencesKey("clave_checkbox")
+        val CLAVE_SWITCH = booleanPreferencesKey("clave_switch")
+        val CLAVE_RADIO = stringPreferencesKey("clave_radio")
+        val CLAVE_DESPLEGABLE = stringPreferencesKey("clave_desplegable")
     }
 
-    val checkOptionFlow: Flow<Boolean> = context.dataStore.data
-        .map { it[CHECK_OPTION] ?: false }
+    // Flujos para leer los datos (Getters asíncronos)
+    val obtenerCheckbox: Flow<Boolean> = context.dataStore.data
+        .map { preferencias -> preferencias[CLAVE_CHECKBOX] ?: false }
 
-    val switchOptionFlow: Flow<Boolean> = context.dataStore.data
-        .map { it[SWITCH_OPTION] ?: false }
+    val obtenerSwitch: Flow<Boolean> = context.dataStore.data
+        .map { preferencias -> preferencias[CLAVE_SWITCH] ?: false }
 
-    val radioOptionFlow: Flow<String> = context.dataStore.data
-        .map { it[RADIO_OPTION] ?: "claro" }
+    val obtenerRadio: Flow<String> = context.dataStore.data
+        .map { preferencias -> preferencias[CLAVE_RADIO] ?: "claro" }
 
-    val dropdownOptionFlow: Flow<String> = context.dataStore.data
-        .map { it[DROPDOWN_OPTION] ?: "español" }
+    val obtenerDesplegable: Flow<String> = context.dataStore.data
+        .map { preferencias -> preferencias[CLAVE_DESPLEGABLE] ?: "español" }
 
-    suspend fun updateCheckOption(value: Boolean) {
-        context.dataStore.edit { it[CHECK_OPTION] = value }
+    // Funciones para escribir los datos (Setters)
+    suspend fun guardarCheckbox(valor: Boolean) {
+        context.dataStore.edit { preferencias -> preferencias[CLAVE_CHECKBOX] = valor }
     }
 
-    suspend fun updateSwitchOption(value: Boolean) {
-        context.dataStore.edit { it[SWITCH_OPTION] = value }
+    suspend fun guardarSwitch(valor: Boolean) {
+        context.dataStore.edit { preferencias -> preferencias[CLAVE_SWITCH] = valor }
     }
 
-    suspend fun updateRadioOption(value: String) {
-        context.dataStore.edit { it[RADIO_OPTION] = value }
+    suspend fun guardarRadio(valor: String) {
+        context.dataStore.edit { preferencias -> preferencias[CLAVE_RADIO] = valor }
     }
 
-    suspend fun updateDropdownOption(value: String) {
-        context.dataStore.edit { it[DROPDOWN_OPTION] = value }
+    suspend fun guardarDesplegable(valor: String) {
+        context.dataStore.edit { preferencias -> preferencias[CLAVE_DESPLEGABLE] = valor }
     }
 }
